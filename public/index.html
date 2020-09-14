@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NoteTaker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Mongo Note App</h1>
+      <label for="Fonts">Select a Font:</label>
+      <select name="Fonts" id="fonts" onchange="fontSelect()">
+        <option id="timesNR" value="Times">Times New Roman</option>
+        <option id="impact" value="Impact">Impact</option>
+        <option id="cursive" value="Cursive">Cursive</option>
+        <option id="typewriter" value="Typewriter">Typewriter</option>
+      </select>
+    </header>
+    <div class="container">
+      <h6 id="currentState">Status: <span id="status" class="primary">Creating</span></h6>
+      <div id="userInput">
+        <h6>Title</h6>
+        <input type="text" id="title" />
+        <br />
+        <h6>Note</h6>
+        <textarea id="note"></textarea>
+        <div id="buttons">
+          <div id="actionButton">
+            <button id="makeNew">Submit</button>
+          </div>
+          <button id="clearAll">Delete All Notes</button>
+        </div>
+      </div>
+
+      <div id="results"></div>
+    </div>
+    <footer class="copyright">
+      <h6>&copy; 2020 Liam Mackinnon</h6>
+  </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
