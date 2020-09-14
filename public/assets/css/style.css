@@ -4,14 +4,14 @@ html {
 }
 
 header{
-  background-image: linear-gradient(to top, transparent,#d66943, #d66943, #d66943);
-  /* background-color: #d66943; */
-  padding: 2rem;
+  /* background-image: linear-gradient(to top, transparent,#d66943, #d66943, #d66943); */
+  background-color: #d66943;
+  padding: 1.1rem;
   margin-bottom: 2rem;
 }
 
 #fonts{
-  margin: 1.5rem 0;
+  margin-top: 0.5rem;
 }
 
 #timesNR{
