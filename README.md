@@ -17,13 +17,15 @@
 >MongoDB Note-Taker Application
 
 ## Keywords
->*MongoDB, noSQL, Note-Taker, Heroku*
+>*MongoDB, noSQL, Note-Taker*
 
 ## Contributors
 >Liam Mackinnon
 
 ## Usage 
->Heroku Deployment, see link below
+>Currently limited to local usage (will expand after mongoose initialization)
+> - npm install
+> - node server.js
 
 ## Installation
 >*npm install*
