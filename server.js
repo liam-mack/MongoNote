@@ -27,7 +27,7 @@ mongoose.connect(
 const databaseUrl = "notetaker";
 const collections = ["notes"];
 
-const db = mongojs(databaseUrl, collections);
+// const db = mongojs(databaseUrl, collections);
 
 db.on("error", error => {
 
