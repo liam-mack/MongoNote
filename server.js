@@ -1,9 +1,6 @@
 const express = require("express");
 const mongojs = require("mongojs");
 const logger = require("morgan");
-const mongoose = require("mongoose");
-
-const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -14,23 +11,12 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/notetaker',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  }
-);
-
 const databaseUrl = "notetaker";
 const collections = ["notes"];
 
-// const db = mongojs(databaseUrl, collections);
+const db = mongojs(databaseUrl, collections);
 
 db.on("error", error => {
-
   console.log("Database Error:", error);
 });
 
@@ -124,6 +110,6 @@ app.delete("/clearall", (req, res) => {
 });
 
 // Listen on port 3000
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+app.listen(3000, () => {
+  console.log("App running on port 3000!");
 });
